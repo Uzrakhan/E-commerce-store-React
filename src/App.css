@@ -1,7 +1,7 @@
+
 .categories{
   margin-top: 5vw;
 }
-
 
 .prod-container{
     display: grid;
@@ -10,6 +10,10 @@
     flex-wrap: wrap;
     padding: 2vw;
     margin-left: 2vw;
+  }
+
+  .prod-container a{
+    text-decoration: none;
   }
   
   .prod-card{
@@ -26,7 +30,6 @@
   .prod-img-div{
     height: 70%;
     width: 100%;
-  
   }
   
   .prod-img{
@@ -41,13 +44,20 @@
     cursor: pointer;
   }
   
-  .prod-details{
+  .product-details {
     height: 30%;
     text-align: center;
     margin-top: 1vw;
     font-size: 1.2vw;
+    color: black;
   }
-  
+
+  .product-details span, 
+.product-details p {
+  text-decoration: none !important;
+}
+
+
   .pagination-container{
     display: flex;
     justify-content: center;
@@ -248,4 +258,10 @@
   font-size: 14px;
   color: #777;
   text-align: center;
+}
+
+.prod-img-det {
+  width: 50vw
+  height: 100%;
+  object-fit: contain;
 }

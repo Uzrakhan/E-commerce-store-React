@@ -9,7 +9,8 @@ import NavBar from './Components/NavBar';
 import Search from './Components/Search';
 import Category from './Components/Category';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import ProductDetails from './pages/ProductDetails';
 
 
 function ProductList() {
@@ -25,7 +26,9 @@ function ProductList() {
               <Category />
               </div>
             </div>
-          }/>
+          }
+          />
+          <Route path='/product/:id' element={<ProductDetails />}/>
         </Routes>
       </div>
     </Router>

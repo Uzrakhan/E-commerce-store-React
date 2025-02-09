@@ -1,4 +1,6 @@
 import React from 'react';
+import ProductDetails from '../pages/ProductDetails';
+
 
   
 const  ProductListing = ({ image,name,price}) => {
@@ -13,8 +15,8 @@ const  ProductListing = ({ image,name,price}) => {
         <div className='prod-img-div'>
           <img src={image} alt='name' className='prod-img'/>
         </div>
-        <div className='prod-details'>
-          <span>{truncateWords(name,10)}</span>
+        <div className='product-details'>
+          <span style={{textDecoration: 'none'}}>{truncateWords(name,10)}</span>
           <p style={{fontWeight:'bold'}}>₹{formattedPrice}</p>
         </div>
       </div>
