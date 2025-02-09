@@ -239,7 +239,94 @@ const products = [
     },
     {
         id: 35,
-        name: ''
+        name: 'Sleepyhead Leatherette Manual Recliner  (Finish Color - Black, DIY(Do-It-Yourself))',
+        price: 14249,
+        category: 'Home Furniture',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/recliner/f/e/k/88-1-seater-black-89-leatherette-rx5-sleepyhead-97-black-original-imah8ra5fddmxhnp.jpeg?q=70'
+    },
+    {
+        id: 36,
+        name: 'Pali Plastic Metal 8 Shelf Book Organizer Plastic Open Book Shelf  (Finish Color - Blue, DIY(Do-It-Yourself))',
+        price: 1167,
+        category: 'Home Furniture',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/book-shelf/u/a/3/pp-bookshelves-book-shelf-in-furniture-book-shelf-with-study-original-imah3zf8g6jvwxwg.jpeg?q=70'
+    },
+    {
+        id: 37,
+        name: 'sbf furniture Engineered Wood Open Book Shelf  (Finish Color - Brown, DIY(Do-It-Yourself))',
+        price: 1649,
+        category: 'Home Furniture',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/book-shelf/k/g/j/22-2-particle-board-47-2-2-bookshelf-multipurpose-ne-furniture-original-imah2myj6zckzg2w.jpeg?q=70'
+    },
+    {
+        id: 38,
+        name: 'Oakcraft Engineered Wood Open Book Shelf  (Finish Color - BLACK, Knock Down)',
+        price: 3099,
+        category: 'Home Furniture',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/book-shelf/j/q/4/23-particle-board-66-18-oc-503-6-tier-black-oakcraft-160-black-6-original-imah3yef6n7mtzch.jpeg?q=70'
+    },
+    {
+        id: 39,
+        name: 'Seventh Heaven 78x36x14 inch Jute Fabric with 4 Cushions 4 Seater Single Foam Fold Out Sofa Cum Bed  (Finish Color - Blue Delivery Condition - Pre-assembled)',
+        price: 9099,
+        category: 'Home Furniture',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/sofa-bed/v/b/q/single-198-12-4-seater-blue-jute-91-44-no-19-sb78-36-14-same4c-original-imah8ubg6kzupjsh.jpeg?q=70'
+    },
+    {
+        id: 40,
+        name: 'Supreme Fusion SR 1 for Home Small Size Plastic Shoe Rack  (Brown, Beige, 3 Shelves, DIY(Do-It-Yourself))',
+        price: 2099,
+        category: 'Home Furniture',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/shoe-rack/v/6/o/37-59-6-36-fusion-01-shoe-rack-globus-brown-and-beige-supreme-original-imah28tgb5c5mvpy.jpeg?q=70'
+    },
+    {
+        id: 41,
+        name: 'Pigeon Favourite Gift Non-Stick Coated Cookware Set  (Aluminium, 7 - Piece)',
+        price: 1199,
+        category: 'Kitchen,Cookware & Serveware',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/cookware-set/i/l/d/-original-imah8r26bqt2hqha.jpeg?q=70'
+    },
+    {
+        id: 42,
+        name: 'Benon Granite Coated Casserole Set of 2.5L+3.5L+4.5L Induction Bottom Non-Stick Coated Cookware Set  (Aluminium, 3 - Piece)',
+        price: 3500,
+        category: 'Kitchen,Cookware & Serveware',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/cookware-set/r/8/p/3-ben0001-benon-original-imah7yr98c6phv4g.jpeg?q=70'
+    },
+    {
+        id: 43,
+        name: 'NSVL Non-Stick Dosa Tawa & Appam Maker | Granite Finish | PFOA Free Non-Stick Coated Cookware Set  (Aluminium, 2 - Piece)',
+        price: 599,
+        category: 'Kitchen,Cookware & Serveware',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/cookware-set/a/k/m/2-appam-dosa-combo-nsvl-original-imah5pgk3hw3eyfr.jpeg?q=70'
+    },
+    {
+        id: 44,
+        name: 'cello Pack of 10 Opalware Dazzle Opalware Oleander Dinner Set | Crockery Set |Green Dinner Set  (Green, Microwave Safe)',
+        price: 699,
+        category: 'Kitchen,Cookware & Serveware',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/dinner-set/g/d/b/-original-imah46t3gdn9uack.jpeg?q=70'
+    },
+    {
+        id: 45,
+        name: 'Flipkart SmartBuy Pack of 40 Melamin Blossom Spectrum Melamine|Dishwasher Safe|Stain Resistant Dinner Set  (White, Multicolor)',
+        price: 1500,
+        category: 'Kitchen,Cookware & Serveware',
+        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/dinner-set/i/y/u/no-40-blossom-spectrum-melamine-dinner-set-dishwasher-safe-stain-original-imah3nr6y8hguudc.jpeg?q=70'
+    },
+    {
+        id: 46,
+        name: 'Flipkart SmartBuy Pack of 61 Stainless Steel Dinner Set  (Silver)',
+        price: 2589,
+        category: 'Kitchen,Cookware & Serveware',
+        image: 'https://rukminim2.flixcart.com/image/612/612/l15bxjk0/dinner-set/8/4/y/-original-imagcrvntmcsgc8x.jpeg?q=70'
+    },
+    {
+        id: 47,
+        name: 'TREO Glass Serving Bowl JELO BOWL 420 ml 2 Pcs Set  (Pack of 2, Clear)',
+        price: 299,
+        category: 'Kitchen,Cookware & Serveware',
+        image: 'https://rukminim2.flixcart.com/image/612/612/kbnz8nk0/bowl/z/u/x/cgwffgo015assr0001-jelo-bowl-420-ml-2-pc-set-treo-original-imafsy24ykyx6zb4.jpeg?q=70'
     }
 ];
 

@@ -1,0 +1,251 @@
+.categories{
+  margin-top: 5vw;
+}
+
+
+.prod-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2vw;
+    flex-wrap: wrap;
+    padding: 2vw;
+    margin-left: 2vw;
+  }
+  
+  .prod-card{
+    display: flex;
+    width: 25vw;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    height: 75vh;
+    padding: 1vw;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prod-img-div{
+    height: 70%;
+    width: 100%;
+  
+  }
+  
+  .prod-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .prod-img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .prod-details{
+    height: 30%;
+    text-align: center;
+    margin-top: 1vw;
+    font-size: 1.2vw;
+  }
+  
+  .pagination-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    padding: 2vw;
+  }
+  
+  .page-number{
+    padding: 1vw;
+    margin: 1vw;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  
+
+.nav-bar{
+    display: flex;
+    background-color: #FFFFFF;
+    align-items: center;
+    color: black;
+    padding: 2vw;
+    padding-bottom: 4vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10vw;
+}
+
+.links .link-tag{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 5vw;
+  flex: 50%;
+  margin-left: 10vw;
+}
+
+.link-tag  a {
+  color: gray;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  transition: color 0.3s ease;
+  position: relative;
+  font-weight: bold;
+  flex-direction: row;
+}
+
+.link-tag .active{
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.link-tag a:hover{
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.link-tag a::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background-color: black;
+  transition: width .5s;
+}
+
+.link-tag a:hover:after{
+  width: 100%;
+}
+
+.links .link-img{
+  flex: 30%;
+}
+
+.link-img  img{
+  border-radius: 5px;
+  transition: transform 0.3s ease-out
+}
+
+.link-img img:hover {
+  transform: scale(1.1);
+}
+
+.utility-tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2vw;
+  margin-right: 3vw;
+  flex: 20%;
+}
+
+.utility-tags p a{
+  text-decoration: none;
+  font-size: 1.5vw;
+  transition: color 0.3s ease;
+  position: relative;
+  font-weight: bold;
+  flex-direction: row;
+  color: black;
+}
+
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 7vw;
+  padding: 2vw;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the search bar (input and button) */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5vw;
+  height: 100px;
+  padding: 10vw;
+}
+
+.search-bar input {
+  flex: 4;
+  padding: 1vw;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  margin-right: 10px;
+  width: 80%;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  margin-top: 2vw;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the search results */
+.search-results {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2vw;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-item {
+  padding: 2vw;
+  border-bottom: 1px solid #eee;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* No results message styling */
+.search-results p {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+}

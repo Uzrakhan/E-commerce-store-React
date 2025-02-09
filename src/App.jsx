@@ -1,38 +1,34 @@
 import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 import products from './products';
 import { PAGE_SIZE } from './constants';
-import ProductCard from './Components/ProductCard';
-
+import ProductListing from './Components/ProductListing';
+import Home from './pages/Home';
+import NavBar from './Components/NavBar';
+import Search from './Components/Search';
+import Category from './Components/Category';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 
 
 function ProductList() {
-  const [searchInput, setSearchInput] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');
   
-  const handleSearch = () => {
-    setSearchQuery(searchInput);
-  }
-
-  const filteredProducts = products.filter((product) => 
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-
   return(
-    <div>
-      <h1>Products</h1>
+    <Router>
+      <NavBar />
       <div>
-        <label>Search Product</label>
-        <input  type='text' value={searchInput} onChange={(e) => setSearchInput(e.target.value)}/>
-        <button  onClick={handleSearch}>Search</button>
+        <Routes>
+          <Route  path='/' element={
+            <div>
+              <div className='categories'>
+              <Category />
+              </div>
+            </div>
+          }/>
+        </Routes>
       </div>
-      <div className='prod-container'>
-        {filteredProducts.map((product) => (
-          <ProductCard key={product.id} name={product.name} image={product.image} price={product.price} category={product.category}/>
-        ))}
-      </div>
-    </div>
+    </Router>
   )
 }
 
