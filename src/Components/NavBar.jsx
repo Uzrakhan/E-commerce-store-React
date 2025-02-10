@@ -59,10 +59,11 @@ const NavBar = () => {
                             <p>
                                 <NavLink>
                                   <FontAwesomeIcon icon={faList} />
+                                  
                                 </NavLink>
                             </p>
                             <p>
-                                <NavLink>
+                                <NavLink to='/cart'>
                                   <FontAwesomeIcon icon={faCartShopping} bounce />
                                 </NavLink>
                             </p>

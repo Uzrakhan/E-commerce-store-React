@@ -297,3 +297,27 @@
   font-size: 1.3vw;
 }
 
+.add-to-cart-btn{
+  padding: 5px 15px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-button{
+  padding: 10px 20px;
+  margin: 1.5vw;
+  margin-left: -0.12vw;
+  background-color: white;
+  border: 1px solid gray;
+  cursor: pointer;
+
+}
+
+.category-button.active{
+  border: 2px solid pink;
+  background-color: #ffe6f2;
+  font-weight: bold;
+}
