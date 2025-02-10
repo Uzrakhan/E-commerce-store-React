@@ -260,8 +260,40 @@
   text-align: center;
 }
 
-.prod-img-det {
-  width: 50vw
+.product-det-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+}
+
+.product-det-img{
+  flex: 50%;
+  width: 100%;
+  height: 80vh;
+  padding: 2vw;
+}
+
+.product-det-img img{
+  width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
 }
+
+.product-det-info{
+  flex: 50%;
+  margin-right: 1vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.location-det select{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 1vw;
+  font-size: 1.3vw;
+}
+
