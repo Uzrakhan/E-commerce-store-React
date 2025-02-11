@@ -10,6 +10,7 @@ import About from './pages/About';
 import Cart from './pages/Cart';
 import NavBar from './Components/NavBar';
 import Search from './Components/Search';
+import Footer from './Components/Footer';
 import Category from './Components/Category';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
@@ -37,6 +38,7 @@ function ProductList() {
             <Route path='/cart' element={<Cart />}/>
           </Routes>
         </div>
+        <Footer />
       </Router>
     </CartProvider>
   )
