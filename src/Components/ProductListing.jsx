@@ -1,9 +1,8 @@
 import React from 'react';
-import ProductDetails from '../pages/ProductDetails';
-
+import products from '../products';
 
   
-const  ProductListing = ({ image,name,price}) => {
+const  ProductListing = ({ image,name,price,ratings}) => {
     const truncateWords = (text, maxWords) => {
       const words = text.split(/\s+/);
       return words.length > maxWords ? words.slice(0, maxWords).join(' ') : text;
@@ -18,6 +17,7 @@ const  ProductListing = ({ image,name,price}) => {
         <div className='product-details'>
           <span style={{textDecoration: 'none'}}>{truncateWords(name,10)}</span>
           <p style={{fontWeight:'bold'}}>₹{formattedPrice}</p>
+          <p>Ratings: {ratings}</p>
         </div>
       </div>
     )

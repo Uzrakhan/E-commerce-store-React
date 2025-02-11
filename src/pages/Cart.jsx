@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { useCart } from '../context/CartContext';
 import { CartProvider } from '../context/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -56,7 +57,9 @@ const Cart = () => {
                         <p>Subtotal: ₹{calculateSubtotal()}</p>
                         <p>Shipping Fee: ₹{shippingFeePerItem}</p>
                         <p><strong>Total: ₹{calculateTotal()}</strong></p>
-                        <button>Proceed To Checkout</button>
+                        <Link to='/place-order'>
+                            <button>Proceed To Checkout</button>
+                        </Link>
                     </div>
                 </div>
             )

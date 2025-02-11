@@ -68,7 +68,8 @@ const products = [
         price: 245,
         category: 'Fashion(Men)',
         image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/p/3/j/m-plain-kurta-triveni-creation-original-imahybf9mf6nftmu.jpeg?q=70',
-        description: 'Keep it classy with this solid black straight kurta. Crafted from a breathable cotton blend for a relaxed fit.'
+        description: 'Keep it classy with this solid black straight kurta. Crafted from a breathable cotton blend for a relaxed fit.',
+        ratings: 2.5
     },
     {
         id: 9,
@@ -76,7 +77,8 @@ const products = [
         price: 395,
         category: 'Fashion(Men)',
         image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/1/i/a/xl-derfv04-deelmo-original-imah72ypppfuw36x.jpeg?q=70',
-        description: 'Make a statement with this white printed kurta. Designed from a cotton blend, it’s ideal for both casual and formal events.'
+        description: 'Make a statement with this white printed kurta. Designed from a cotton blend, it’s ideal for both casual and formal events.',
+        ratings: 3.45
     }, 
     {
         id: 10,
@@ -84,7 +86,8 @@ const products = [
         price: 399,
         category: 'Fashion(Men)',
         image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/v/p/m/m-kurta1501-zartha-original-imagsuzdfeyy2wgh.jpeg?q=70',
-        description: 'This light blue solid kurta offers a sophisticated look. Made from a soft cotton blend for comfort throughout the day.'
+        description: 'This light blue solid kurta offers a sophisticated look. Made from a soft cotton blend for comfort throughout the day.',
+        ratings: 2.34
     },
     {
         id: 11,
@@ -92,7 +95,8 @@ const products = [
         price: 14999,
         category: 'Electronics',
         image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/y/x/f/-original-imah4khx9u3zxdbk.jpeg?q=70',
-        description: 'Experience lightning-fast performance with the realme P1 5G, featuring 128GB storage and 6GB RAM. Perfect for multitasking and gaming.'
+        description: 'Experience lightning-fast performance with the realme P1 5G, featuring 128GB storage and 6GB RAM. Perfect for multitasking and gaming.',
+        ratings: 3
     },
     {
         id: 12,
@@ -100,7 +104,8 @@ const products = [
         price: 36999,
         category: 'Electronics',
         image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/f/m/m/-original-imah3hvk9kgfsads.jpeg?q=70',
-        description: 'Unleash superior performance with the vivo V40 5G 5G. Featuring 256GB storage, 12GB RAM, and a stunning Mystic Black finish, it’s built for power users.'
+        description: 'Unleash superior performance with the vivo V40 5G 5G. Featuring 256GB storage, 12GB RAM, and a stunning Mystic Black finish, it’s built for power users.',
+        ratings: 4.5
     }, 
     {
         id: 13,
@@ -108,7 +113,8 @@ const products = [
         price: 13999,
         category: 'Electronics',
         image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/d/x/1/-original-imah4kxes2ktzf9f.jpeg?q=70',
-        description: 'Immerse yourself in sound with Sony WH-1000XM5 headphones, offering premium noise cancellation, high-resolution audio, and wireless convenience.'
+        description: 'Immerse yourself in sound with  vivo T3x 5G (Sapphire Blue, 128 GB)  (6 GB RAM) , offering premium noise cancellation, high-resolution audio, and wireless convenience.',
+        ratings: 5
     },
     {
         id: 14,
@@ -116,7 +122,8 @@ const products = [
         price: 28999,
         category: 'Electronics',
         image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/7/v/f/v40e-5g-v2403-vivo-original-imah6yshxyvnyfnt.jpeg?q=70',
-        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha'
+        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha',
+        ratings: 2.45
     }, 
     {
         id: 15,
@@ -124,7 +131,8 @@ const products = [
         price: 18499,
         category: 'Electronics',
         image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70',
-        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha'
+        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha',
+        ratings: 3.68
     },
     {
         id: 16,
@@ -132,7 +140,8 @@ const products = [
         price: 50000,
         category: 'Electronics',
         image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/computer/x/0/g/15-fb0150ax-gaming-laptop-hp-original-imagrwmg9nw5ayzf.jpeg?q=70',
-        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha'
+        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha',
+        ratings: 4.5
     },
     {
         id: 17,
@@ -140,7 +149,8 @@ const products = [
         price: 52000,
         category: 'Electronics',
         image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/computer/8/i/j/-original-imagthcbgurdzwuc.jpeg?q=70',
-        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha'
+        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha',
+        ratings: 2.34
     },
     {
         id: 18,
@@ -148,7 +158,8 @@ const products = [
         price: 25000,
         category: 'Electronics',
         image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/computer/g/c/y/nu14u3inf56bn-mb-thin-and-light-laptop-ultimus-original-imagrtanznjrgb3u.jpeg?q=70',
-        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha'
+        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha',
+        ratings: 3.78
     },
     {
         id: 19,
@@ -156,7 +167,8 @@ const products = [
         price: 1343,
         category: 'Footwear',
         image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/l/j/k/10-hrxecsp664-hrx-by-hrithik-roshan-white-grey-original-imah4k4pzzzjj79g.jpeg?q=70',
-        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha'
+        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha',
+        ratings: 4.6
     },
     {
         id: 20,
@@ -164,7 +176,8 @@ const products = [
         price: 599,
         category: 'Footwear',
         image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/3/h/r/6-oogiy-40-aeonik-white-original-imagxggbkjyu2gze.jpeg?q=70',
-        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha'
+        description: 'Lorem ipsum jjdndn sjsjksk fkfkmfm gwvbenn zkkxkkx hhgiejrnen dbbdggwha',
+        ratings: 4.5
     }, 
     {
         id: 21,

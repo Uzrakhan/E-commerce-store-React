@@ -1,3 +1,76 @@
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://via.placeholder.com/1920x1080") no-repeat center center/cover;
+  position: relative;
+}
+
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text visibility */
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e64a19;
+}
+
+.featured-products-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4vw;
+}
+
+.featured-products-card{
+  margin: 3.5vw;
+}
+
+.featured-products-card a{
+  text-decoration: none;
+}
+
 
 .categories{
   margin-top: 5vw;
@@ -384,6 +457,7 @@
 .cart-item-left-text{
   margin-left: -25vw;
   width: 33.33%;
+  font-size: 1.3vw;
 }
 
 .cart-item-right{
@@ -452,3 +526,61 @@
   align-items: center;
   font-weight: 600;
 }
+
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-img-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 8vw;
+  margin: 1vw;
+}
+
+.contact-img-info p{
+  text-align: left;
+  margin-left: 1.5vw;
+}
+
+.contact-img-info button{
+  width: 40%;
+  padding: 5px 16px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 8px;
+  margin-left: 1vw;
+}
+
+form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5vw;
+  padding: 2vw;
+  border: 1px solid gray;
+}
+
+.form-left{
+  flex: 50%;
+  margin: 1vw;
+}
+
+.form-left input{
+  padding: 1vw;
+  margin: 0.7vw;
+  
+}
+
+.form-right{
+  flex: 50%;
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+}
+

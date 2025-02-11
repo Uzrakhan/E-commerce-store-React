@@ -9,6 +9,7 @@ import products from '../products';
 
 const NavBar = () => {
     const [showSearch, setShowSearch] = useState(false);
+    const [cart,setCart] = useState([]);
 
     const toggleSearchBar = () => {
         setShowSearch(!showSearch);
@@ -64,9 +65,9 @@ const NavBar = () => {
                             </p>
                             <p>
                                 <NavLink to='/cart'>
-                                  <FontAwesomeIcon icon={faCartShopping} bounce />
+                                  <FontAwesomeIcon icon={faCartShopping} />
                                 </NavLink>
-                            </p>
+                           </p>
                         </div>
                 </div>
 

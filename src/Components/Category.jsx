@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import products from '../products';
 import ProductListing from './ProductListing';
 import { Link } from 'react-router-dom';
 
 const Category = () => {
   const categories = [...new Set(products.map((product) => product.category))];
+  const [isSortedByPrice,setIsSortedByPrice] = useState(false);
+  const [isSortedByRatings,setIsSortedByRatings] = useState(false);
 
 
     const groupByCategory = (items) => {
@@ -19,44 +21,73 @@ const Category = () => {
         }, {});
     };
 
-    const groupedProducts = groupByCategory(products);
+    const getSortedProducts = () => {
+      let sorted = [...products];
 
-    /*
-    return(
-        <div>
-            {Object.keys(groupedProducts).map((category) => (
-                <div key={category}>
-                    <h2 style={{textAlign: 'center', textDecoration: 'underline'}}>{category}</h2>
-                    <div className='prod-container'>
-                      {groupedProducts[category].map((product) => (
-                       <ProductListing 
-                        key={product.id} 
-                        name={product.name} 
-                        image={product.image} 
-                        price={product.price} 
-                        category={product.category}/>
-            ))}
-            </div>
-          </div>
-        ))}
-        </div>
-    )
-    */
+      if(isSortedByPrice || isSortedByRatings) {
+        sorted.sort((a,b) => {
+          if(isSortedByRatings && a.ratings !== b.ratings) {
+            return b.ratings - a.ratings;
+          }
+          if(isSortedByPrice) {
+            return a.price - b.price;
+          }
+          return 0;
+        })
+      }
+      return sorted;
+    }
 
+
+    const sortedProducts = getSortedProducts();
+    const groupedProducts = groupByCategory(sortedProducts);
+
+    const handleSortToggleByPrice = () => {
+      setIsSortedByPrice((prev) => !prev);
+    };
+
+    const handleSortToggleByRatings = () => {
+      setIsSortedByRatings((prev) => !prev)
+    }
     return (
       <div>
+        <div style={{ padding: '2vw', textAlign: 'center' }}>
+          <button
+           style={{
+            padding: '0.8vw 1.5vw',
+            marginBottom: '2vw',
+            cursor: 'pointer',
+            fontSize: '1rem',
+          }}
+           onClick={handleSortToggleByPrice}
+          >
+            {isSortedByPrice ? 'Show Original Order': 'Sort All by Price'}
+          </button>
+          <button
+           style={{
+            padding: '0.8vw 1.5vw',
+            marginBottom: '2vw',
+            cursor: 'pointer',
+            fontSize: '1rem',
+          }}
+          onClick={handleSortToggleByRatings}
+          >
+            {isSortedByRatings ? 'Show Original Order' : 'Sort By Popularity'}
+          </button>
+        </div>
         {categories.map((category) => (
           <div key={category} style={{padding: '2vw'}}>
             <h2 style={{marginLeft: '4vw',textTransform: 'uppercase'}}>{category}</h2>
             <div className='prod-container'>
-              {products.filter((product) => product.category === category).map((product) => (
+              {groupedProducts[category].map((product) => (
                 <Link to={`/product/${product.id}`} key={product.id}>
-                  <ProductListing 
-                   name={product.name} 
-                   image={product.image} 
-                   price={product.price} 
-                   category={product.category}
-                  />
+                  <ProductListing
+                  name={product.name}
+                  image={product.image}
+                  price={product.price}
+                  category={product.category}
+                  ratings={product.ratings}
+                />
                 </Link>
               ))}
             </div>

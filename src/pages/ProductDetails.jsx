@@ -3,8 +3,6 @@ import { useParams } from 'react-router';
 import products from '../products';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
-import {faLocationCrosshairs} from '@fortawesome/free-solid-svg-icons';
-import Cart from './Cart';
 import { useCart } from '../context/CartContext';
 
 const ProductDetails = () => {
