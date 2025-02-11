@@ -10,30 +10,54 @@ const Cart = () => {
 
     
     return(
-        <div>
-            <h1>CART</h1>
+        <div className='cart-container'>
+            <div>
+                <div className='cart-part-left'>
+                    <span>YOUR CART ----</span>
+                </div>
+            </div>
             {cartItems.length === 0 ? (
-                <p>Your Cart is empty.</p>
+                <div>
+                    <div className='cart-part-right'>
+                        <span>CART TOTALS-----</span>
+                        <p>Subtotal: 0.00</p>
+                        <p>Shipping Fee: 0.00</p>
+                        <p>Total: 0.00</p>
+                    </div>
+                </div>
             ) : (
                 <div>
-                    <h1>Cart Items</h1>
-                    <ul>
-                        {cartItems.map((item) => (
-                            <div key={item.id}>
-                                <li key={item.id}>
-                                    {item.name} - ₹{item.price} x {item.quantity}
-                                </li>
-                                <button onClick={() => increaseQuantity(item.id)}>➕</button>
-                                <button onClick={() => decreaseQuantity(item.id)}>➖</button>
-                                <button onClick={() => deleteFromCart(item.id)}>
-                                    <FontAwesomeIcon icon={faTrash} />
-                                </button>
-                            </div>
-                        ))}
-                    </ul>
-                    <p>Subtotal: ₹{calculateSubtotal()}</p>
-                    <p>Shipping Fee: ₹{shippingFeePerItem}</p>
-                    <h3>Total: ₹{calculateTotal()}</h3>
+                    <div>
+                            {cartItems.map((item) => (
+                                <div 
+                                key={item.id}
+                                className='cart-item-container'
+                                style={{display:'flex', flexDirection: 'row'}}
+                                >
+                                    <div className='cart-item-left-img-div'>
+                                        <img src={item.image} alt={item.name} width='150px' height='150px'/>
+                                    </div>
+                                    <div className='cart-item-left-text'>
+                                        <p>{item.name}</p>
+                                        <p>₹{item.price} x {item.quantity}</p>
+                                    </div>
+                                    <div className='cart-item-right'>
+                                        <button onClick={() => increaseQuantity(item.id)}>➕</button>
+                                        <button onClick={() => decreaseQuantity(item.id)}>➖</button>
+                                        <button onClick={() => deleteFromCart(item.id)}>
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                    </div>
+                    <div className='cart-part-right'>
+                        <span>CART TOTALS-----</span>
+                        <p>Subtotal: ₹{calculateSubtotal()}</p>
+                        <p>Shipping Fee: ₹{shippingFeePerItem}</p>
+                        <p><strong>Total: ₹{calculateTotal()}</strong></p>
+                        <button>Proceed To Checkout</button>
+                    </div>
                 </div>
             )
         }
