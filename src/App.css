@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("https://via.placeholder.com/1920x1080") no-repeat center center/cover;
+  background: url('https://plus.unsplash.com/premium_photo-1701180091415-3bbd731ddcf1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZhc2hpb24lMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
   position: relative;
 }
 
