@@ -51,7 +51,7 @@ const Category = () => {
     }
     return (
       <div>
-        <div style={{ padding: '2vw', textAlign: 'center' }}>
+        <div style={{ padding: '2vw', textAlign: 'center'}}>
           <button
            style={{
             backgroundColor: isSortedByPrice ? '#E03546' : 'white',
@@ -60,6 +60,7 @@ const Category = () => {
             border: '1px solid gray',
             borderRadius: '10px',
             marginBottom: '2vw',
+            marginRight: '3vw',
             cursor: 'pointer',
             fontSize: '1rem',
           }}
@@ -74,14 +75,25 @@ const Category = () => {
           </button>
           <button
            style={{
-            padding: '0.8vw 1.5vw',
+            backgroundColor: isSortedByRatings ? '#E03546' : 'white',
+            color: isSortedByRatings ? 'white' : 'gray',
+            padding: '0.2vw 1.6vw',
+            border: '1px solid gray',
+            borderRadius: '10px',
             marginBottom: '2vw',
             cursor: 'pointer',
             fontSize: '1rem',
           }}
           onClick={handleSortToggleByRatings}
           >
-            {isSortedByRatings ? 'Show Original Order' : 'Sort By Popularity'}
+            Sort By Popularity 
+            {isSortedByRatings && (
+              <span 
+               style={{color: 'white', fontWeight: '500', marginBottom: '30px', marginLeft: '10px'}}
+               onClick={(e) => e.stopPropagation()}>
+               x
+              </span>
+            )}
           </button>
         </div>
         {categories.map((category) => (
