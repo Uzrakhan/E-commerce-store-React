@@ -54,14 +54,23 @@ const Category = () => {
         <div style={{ padding: '2vw', textAlign: 'center' }}>
           <button
            style={{
-            padding: '0.8vw 1.5vw',
+            backgroundColor: isSortedByPrice ? '#E03546' : 'white',
+            color: isSortedByPrice ? 'white' : 'gray',
+            padding: '0.2vw 1.6vw',
+            border: '1px solid gray',
+            borderRadius: '10px',
             marginBottom: '2vw',
             cursor: 'pointer',
             fontSize: '1rem',
           }}
            onClick={handleSortToggleByPrice}
           >
-            {isSortedByPrice ? 'Show Original Order': 'Sort All by Price'}
+            Sort By Price 
+            {isSortedByPrice && (
+              <span style={{color: 'white', fontWeight: '500', marginBottom: '30px', marginLeft: '10px'}} onClick={(e) => e.stopPropagation()}>
+                x
+              </span>
+            )}
           </button>
           <button
            style={{
