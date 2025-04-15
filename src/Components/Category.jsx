@@ -103,6 +103,7 @@ const Category = () => {
               {groupedProducts[category].map((product) => (
                 <Link to={`/product/${product.id}`} key={product.id}>
                   <ProductListing
+                  id={product.id}
                   name={product.name}
                   image={product.image}
                   price={product.price}

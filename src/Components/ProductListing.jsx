@@ -2,13 +2,20 @@ import React from 'react';
 import products from '../products';
 
   
-const  ProductListing = ({ image,name,price,ratings}) => {
+const  ProductListing = ({ id,image,name,ratings}) => {
     const truncateWords = (text, maxWords) => {
       const words = text.split(/\s+/);
       return words.length > maxWords ? words.slice(0, maxWords).join(' ') : text;
     };
 
-    const formattedPrice = price ? price.toLocaleString() : 'N/A';
+
+    const product = products.find((item) => item.id === parseInt(id));
+
+    const formattedPrice = product && product.originalPrice ? product.originalPrice.toLocaleString():'N/A';
+
+    const discountedPrice = product.originalPrice - product.originalPrice * (parseInt(product.discountPercentage) / 100);
+    const roundedDiscountedPrice = Math.round(discountedPrice);
+    const formattedRoundedPrice = roundedDiscountedPrice.toLocaleString()
     return(
       <div className='prod-card'>
         <div className='prod-img-div'>
@@ -16,8 +23,11 @@ const  ProductListing = ({ image,name,price,ratings}) => {
         </div>
         <div className='product-details'>
           <span style={{textDecoration: 'none'}}>{truncateWords(name,10)}</span>
-          <p style={{fontWeight:'bold'}}>₹{formattedPrice}</p>
-          <p>Ratings: {ratings}</p>
+          <div className='product-details-prices'>
+            <p style={{color: 'black', fontWeight: 'bold'}}>₹{formattedRoundedPrice}</p>
+            <p style={{fontWeight:'bold', textDecorationLine: 'line-through', color: 'gray'}}>₹{formattedPrice}</p>
+            <p style={{color: 'green', fontWeight: 'bold'}}>{product.discountPercentage}% off</p>
+          </div>
         </div>
       </div>
     )

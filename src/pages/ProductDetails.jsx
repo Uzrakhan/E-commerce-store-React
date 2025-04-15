@@ -20,6 +20,12 @@ const ProductDetails = () => {
     const { addToCart } = useCart();
 
 
+    const formattedPrice = product && product.originalPrice ? product.originalPrice.toLocaleString():'N/A';
+
+    const discountedPrice = product.originalPrice - product.originalPrice * (parseInt(product.discountPercentage) / 100);
+    const roundedDiscountedPrice = Math.round(discountedPrice);
+    const formattedRoundedPrice = roundedDiscountedPrice.toLocaleString()
+
     //function to render category-specific details
     const renderCategoryDetails = (category) => {
         const handleSizeClick = (size) => {
@@ -74,7 +80,19 @@ const ProductDetails = () => {
                         <FontAwesomeIcon icon={faStar} />
                         (122)
                     </div>
-                    <span style={{fontWeight: 'bold', marginTop: '1vw', fontSize: '2vw'}}>₹{product.price}</span>
+
+                    <div style={{display: 'flex', justifyContent: 'start', alignItems: 'center', gap: '1vw'}}>
+                        <span style={{fontWeight: 'bold', fontSize: '2vw'}}>
+                            ₹{formattedRoundedPrice}
+                        </span>
+                        <span style={{fontWeight:'bold', textDecorationLine: 'line-through', color: 'gray'}}>
+                            ₹{formattedPrice}
+                        </span>
+                        <span style={{color: 'green', fontWeight: 'bold'}}>
+                            {product.discountPercentage}% off
+                        </span>
+                    </div>
+                    
                     <div className='location-det'>
                         Deliver to:
                         <select value={selectedLocation} onChange={(e) => setSelectedLocation(e.target.value)}>
